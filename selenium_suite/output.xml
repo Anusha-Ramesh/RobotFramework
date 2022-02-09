@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220208 20:43:24.931" rpa="false" schemaversion="2">
+<suite id="s1" name="Orange Hrm Suite1" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\orange_hrm_suite1.robot">
+<test id="s1-t1" name="TC1 Valid Login">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}\\drivers</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220208 20:43:25.228" level="INFO">Environment variable 'Path' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\xampp\mysql\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\Anusha\AppData\Local\Programs\Python\Python310;C:\Users\Anusha\PycharmProjects\Mini\venv\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\xampp\mysql\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\Anusha\AppData\Local\Microsoft\WindowsApps;C:\Users\Anusha\AppData\Local\JetBrains\PyCharm 2021.1.2\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.1\bin;C:\Python38-32\Scrpits;C:\WINDOWS;C:\Python38-32Scripts;C:\Python37\Scripts;C:\Users\Anusha\AppData\Local\Programs\Python\Python310;C:\Users\Anusha\AppData\Local\Programs\Python;C:\Users\Anusha\AppData\Local\Programs\Python\Python310;C:\Users\Anusha\AppData\Local\Programs\Python\Python310;C:\Users\Anusha\PycharmProjects\Mini\venv\Scripts;C:\Users\Anusha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\drivers'.</msg>
+<status status="PASS" starttime="20220208 20:43:25.228" endtime="20220208 20:43:25.228"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220208 20:43:25.228" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<msg timestamp="20220208 20:43:25.244" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220208 20:43:25.244" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220208 20:43:25.228" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtUsername</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtPassword</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=Submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=My Info</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Emergency Contacts</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnAddContact</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=emgcontacts_name</arg>
+<arg>ABC</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=emgcontacts_relationship</arg>
+<arg>Father</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=emgcontacts[homePhone]</arg>
+<arg>082134567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=emgcontacts[mobilePhone]</arg>
+<arg>8976543210</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnSaveEContact</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220208 20:43:25.244" endtime="20220208 20:43:25.244"/>
+</kw>
+<status status="FAIL" starttime="20220208 20:43:25.213" endtime="20220208 20:43:25.244">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<status status="FAIL" starttime="20220208 20:43:24.931" endtime="20220208 20:43:25.259"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Orange Hrm Suite1">Orange Hrm Suite1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
