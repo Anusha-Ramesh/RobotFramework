@@ -8,7 +8,7 @@ TC1 Login Valid
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Click Element    link=For Employer
-    Switch Window    MediBuddy LuanchPad
+    Switch Window    MediBuddy LaunchPad
     Click Element    link=Sign up
     Input Text    id=name    ABC
     Input Text    id=email    abc1@gmail.com
@@ -18,5 +18,5 @@ TC1 Login Valid
     Input Text    id=pincode    042133
     Input Text    id= websiteUrl   www.google.com
     Input Text    id=empCount    50
-    Click Element   class=btn-primary shadow-lg mt-10 px-10
-    Set Selenium Implicit Wait    10s
+    Click Element   xpath=//input[@value='Next']
+    Close Window
