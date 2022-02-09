@@ -12,4 +12,5 @@ TC1 Login Valid
     Input Text    name=field_company_name_registration    admin@gmail.com
     Input Text    id=edit-field-company-name-registration    google
     Select From List By Label    name=field_business_focus_reg     IT Consulting
-    Click Element    xPath=//button*[@id="edit-submit--2"]
+    Click Element    name=op
+    Close Browser
