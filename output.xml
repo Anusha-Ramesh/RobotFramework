@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 12:06:46.784" rpa="false" schemaversion="2">
-<suite id="s1" name="Alert Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\alert_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 13:19:15.345" rpa="false" schemaversion="2">
+<suite id="s1" name="Nasscom Membership" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\nasscom_membership.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}\\drivers\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 12:06:47.534" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220210 12:06:47.534" endtime="20220210 12:06:48.916"/>
+<msg timestamp="20220210 13:19:15.626" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 13:19:15.626" endtime="20220210 13:19:16.732"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 12:06:48.917" endtime="20220210 12:06:49.060"/>
+<status status="PASS" starttime="20220210 13:19:16.732" endtime="20220210 13:19:17.011"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 12:06:49.062" endtime="20220210 12:06:49.068"/>
+<status status="PASS" starttime="20220210 13:19:17.012" endtime="20220210 13:19:17.013"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
+<arg>url=https://nasscom.in/nasscom-membership</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220210 12:06:49.069" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
-<status status="PASS" starttime="20220210 12:06:49.069" endtime="20220210 12:06:50.060"/>
+<msg timestamp="20220210 13:19:17.014" level="INFO">Opening url 'https://nasscom.in/nasscom-membership'</msg>
+<status status="PASS" starttime="20220210 13:19:17.014" endtime="20220210 13:19:20.725"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//img[@alt='Go']</arg>
+<arg>id=edit-field-membership-type-und-1203</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 12:06:50.062" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
-<status status="PASS" starttime="20220210 12:06:50.061" endtime="20220210 12:06:50.144"/>
+<msg timestamp="20220210 13:19:20.727" level="INFO">Clicking element 'id=edit-field-membership-type-und-1203'.</msg>
+<status status="PASS" starttime="20220210 13:19:20.725" endtime="20220210 13:19:20.789"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-field-business-focus-inst-und-966</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 13:19:20.789" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-966'.</msg>
+<status status="PASS" starttime="20220210 13:19:20.789" endtime="20220210 13:19:20.984"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-field-business-focus-inst-und-970</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 13:19:20.985" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-970'.</msg>
+<status status="PASS" starttime="20220210 13:19:20.984" endtime="20220210 13:19:21.207"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Calculate Membership Fee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 13:19:21.208" level="INFO">Clicking element 'link=Calculate Membership Fee'.</msg>
+<status status="PASS" starttime="20220210 13:19:21.208" endtime="20220210 13:19:21.296"/>
 </kw>
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${alert_text}</var>
 <arg>action=Accept</arg>
 <arg>timeout=20s</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20220210 12:06:50.145" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:20</msg>
-<msg timestamp="20220210 12:06:50.149" level="INFO">${alert_text} = Customer ID  cannot be left blank.</msg>
-<status status="PASS" starttime="20220210 12:06:50.144" endtime="20220210 12:06:50.149"/>
+<msg timestamp="20220210 13:19:21.297" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:20</msg>
+<msg timestamp="20220210 13:19:21.303" level="INFO">${alert_text} = Please enter amount in digit and greater than zero.</msg>
+<status status="PASS" starttime="20220210 13:19:21.297" endtime="20220210 13:19:21.303"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${alert_text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 12:06:50.150" endtime="20220210 12:06:50.151"/>
+<status status="PASS" starttime="20220210 13:19:21.303" endtime="20220210 13:19:21.304"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220210 12:06:50.151" endtime="20220210 12:06:52.350"/>
-</kw>
-<status status="PASS" starttime="20220210 12:06:47.533" endtime="20220210 12:06:52.350"/>
+<status status="PASS" starttime="20220210 13:19:15.626" endtime="20220210 13:19:21.306"/>
 </test>
-<status status="PASS" starttime="20220210 12:06:46.791" endtime="20220210 12:06:52.356"/>
+<status status="PASS" starttime="20220210 13:19:15.345" endtime="20220210 13:19:21.311"/>
 </suite>
 <statistics>
 <total>
@@ -59,7 +73,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Alert Suite">Alert Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Nasscom Membership">Nasscom Membership</stat>
 </suite>
 </statistics>
 <errors>
