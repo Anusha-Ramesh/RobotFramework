@@ -50,3 +50,5 @@ TC6
    Log To Console      The employee age is  ${EMPLOYEE1}[age]
    Log Dictionary     ${EMPLOYEE1}
    Log List       ${Colors}
+
+
