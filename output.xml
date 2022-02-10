@@ -1,103 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 15:21:24.290" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 16:29:33.757" rpa="false" schemaversion="2">
 <suite id="s1" name="Hdfc Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\hdfc_suite.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}\\drivers\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 15:21:24.597" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220210 15:21:24.597" endtime="20220210 15:21:25.884"/>
+<msg timestamp="20220210 16:29:34.462" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 16:29:34.461" endtime="20220210 16:29:36.000"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 15:21:25.884" endtime="20220210 15:21:25.996"/>
+<status status="PASS" starttime="20220210 16:29:36.000" endtime="20220210 16:29:36.137"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 15:21:25.997" endtime="20220210 15:21:26.002"/>
+<status status="PASS" starttime="20220210 16:29:36.138" endtime="20220210 16:29:36.148"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=https://netbanking.hdfcbank.com/netbanking/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220210 15:21:26.003" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/'</msg>
-<status status="PASS" starttime="20220210 15:21:26.003" endtime="20220210 15:21:29.155"/>
+<msg timestamp="20220210 16:29:36.155" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/'</msg>
+<status status="PASS" starttime="20220210 16:29:36.155" endtime="20220210 16:29:38.425"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath=//frame[@name='login_page']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220210 16:29:38.429" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
+<status status="PASS" starttime="20220210 16:29:38.427" endtime="20220210 16:29:38.490"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=fldLoginUserId</arg>
 <arg>Abc123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 15:21:29.156" level="INFO">Typing text 'Abc123' into text field 'name=fldLoginUserId'.</msg>
-<msg timestamp="20220210 15:21:34.215" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=98.0.4758.82)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x01217AC3+2587331]
-	Ordinal0 [0x011AADD1+2141649]
-	Ordinal0 [0x010A3BB8+1063864]
-	Ordinal0 [0x0108C5D0+968144]
-	Ordinal0 [0x010EAE49+1355337]
-	Ordinal0 [0x010F8192+1409426]
-	Ordinal0 [0x010E84A6+1344678]
-	Ordinal0 [0x010C53F6+1201142]
-	Ordinal0 [0x010C62E6+1204966]
-	GetHandleVerifier [0x013BDF22+1680738]
-	GetHandleVerifier [0x01470DBC+2413564]
-	GetHandleVerifier [0x012AD151+563089]
-	GetHandleVerifier [0x012ABF13+558419]
-	Ordinal0 [0x011B081E+2164766]
-	Ordinal0 [0x011B5508+2184456]
-	Ordinal0 [0x011B5650+2184784]
-	Ordinal0 [0x011BF5BC+2225596]
-	BaseThreadInitThunk [0x76008494+36]
-	RtlAreBitsSet [0x77CC41C8+136]
-	RtlAreBitsSet [0x77CC4198+88]
-</msg>
-<msg timestamp="20220210 15:21:34.221" level="FAIL">Element with locator 'name=fldLoginUserId' not found.</msg>
-<status status="FAIL" starttime="20220210 15:21:29.156" endtime="20220210 15:21:34.221"/>
+<msg timestamp="20220210 16:29:38.491" level="INFO">Typing text 'Abc123' into text field 'name=fldLoginUserId'.</msg>
+<status status="PASS" starttime="20220210 16:29:38.491" endtime="20220210 16:29:38.573"/>
 </kw>
-<status status="FAIL" starttime="20220210 15:21:24.596" endtime="20220210 15:21:34.222">Element with locator 'name=fldLoginUserId' not found.</status>
+<kw name="Comment" library="BuiltIn">
+<arg>Click on continue</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220210 16:29:38.574" endtime="20220210 16:29:38.574"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=CONTINUE</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 16:29:38.575" level="INFO">Clicking element 'link=CONTINUE'.</msg>
+<status status="PASS" starttime="20220210 16:29:38.574" endtime="20220210 16:29:39.887"/>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<arg>switch to main html</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220210 16:29:39.888" endtime="20220210 16:29:39.888"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220210 16:29:39.889" endtime="20220210 16:29:39.894"/>
+</kw>
+<status status="PASS" starttime="20220210 16:29:34.461" endtime="20220210 16:29:39.895"/>
 </test>
-<status status="FAIL" starttime="20220210 15:21:24.292" endtime="20220210 15:21:34.226"/>
+<status status="PASS" starttime="20220210 16:29:33.762" endtime="20220210 16:29:39.898"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Hdfc Suite">Hdfc Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Hdfc Suite">Hdfc Suite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220210 15:21:34.215" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=98.0.4758.82)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x01217AC3+2587331]
-	Ordinal0 [0x011AADD1+2141649]
-	Ordinal0 [0x010A3BB8+1063864]
-	Ordinal0 [0x0108C5D0+968144]
-	Ordinal0 [0x010EAE49+1355337]
-	Ordinal0 [0x010F8192+1409426]
-	Ordinal0 [0x010E84A6+1344678]
-	Ordinal0 [0x010C53F6+1201142]
-	Ordinal0 [0x010C62E6+1204966]
-	GetHandleVerifier [0x013BDF22+1680738]
-	GetHandleVerifier [0x01470DBC+2413564]
-	GetHandleVerifier [0x012AD151+563089]
-	GetHandleVerifier [0x012ABF13+558419]
-	Ordinal0 [0x011B081E+2164766]
-	Ordinal0 [0x011B5508+2184456]
-	Ordinal0 [0x011B5650+2184784]
-	Ordinal0 [0x011BF5BC+2225596]
-	BaseThreadInitThunk [0x76008494+36]
-	RtlAreBitsSet [0x77CC41C8+136]
-	RtlAreBitsSet [0x77CC4198+88]
-</msg>
 </errors>
 </robot>
