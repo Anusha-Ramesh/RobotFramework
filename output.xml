@@ -1,140 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 13:33:39.325" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo3 Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\robot_suite\demo3_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 15:21:24.290" rpa="false" schemaversion="2">
+<suite id="s1" name="Hdfc Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\hdfc_suite.robot">
 <test id="s1-t1" name="TC1">
-<kw name="Set Local Variable" library="BuiltIn">
-<arg>${firstname}</arg>
-<arg>Jennifer</arg>
-<doc>Makes a variable available everywhere within the local scope.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">${firstname} = Jennifer</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}\\drivers\\chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220210 15:21:24.597" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 15:21:24.597" endtime="20220210 15:21:25.884"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${lastname}</var>
-<arg>Chopda</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">${lastname} = Chopda</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220210 15:21:25.884" endtime="20220210 15:21:25.996"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${firstname} ${lastname}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220210 15:21:25.997" endtime="20220210 15:21:26.002"/>
 </kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{fruits}</var>
-<arg>mango</arg>
-<arg>apple</arg>
-<arg>orange</arg>
-<arg>grapes</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">@{fruits} = [ mango | apple | orange | grapes ]</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://netbanking.hdfcbank.com/netbanking/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 15:21:26.003" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/'</msg>
+<status status="PASS" starttime="20220210 15:21:26.003" endtime="20220210 15:21:29.155"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${fruits}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=fldLoginUserId</arg>
+<arg>Abc123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220210 15:21:29.156" level="INFO">Typing text 'Abc123' into text field 'name=fldLoginUserId'.</msg>
+<msg timestamp="20220210 15:21:34.215" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01217AC3+2587331]
+	Ordinal0 [0x011AADD1+2141649]
+	Ordinal0 [0x010A3BB8+1063864]
+	Ordinal0 [0x0108C5D0+968144]
+	Ordinal0 [0x010EAE49+1355337]
+	Ordinal0 [0x010F8192+1409426]
+	Ordinal0 [0x010E84A6+1344678]
+	Ordinal0 [0x010C53F6+1201142]
+	Ordinal0 [0x010C62E6+1204966]
+	GetHandleVerifier [0x013BDF22+1680738]
+	GetHandleVerifier [0x01470DBC+2413564]
+	GetHandleVerifier [0x012AD151+563089]
+	GetHandleVerifier [0x012ABF13+558419]
+	Ordinal0 [0x011B081E+2164766]
+	Ordinal0 [0x011B5508+2184456]
+	Ordinal0 [0x011B5650+2184784]
+	Ordinal0 [0x011BF5BC+2225596]
+	BaseThreadInitThunk [0x76008494+36]
+	RtlAreBitsSet [0x77CC41C8+136]
+	RtlAreBitsSet [0x77CC4198+88]
+</msg>
+<msg timestamp="20220210 15:21:34.221" level="FAIL">Element with locator 'name=fldLoginUserId' not found.</msg>
+<status status="FAIL" starttime="20220210 15:21:29.156" endtime="20220210 15:21:34.221"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${fruits}[0]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<for flavor="IN">
-<var>${color}</var>
-<value>@{fruits}</value>
-<iter>
-<var name="${color}">mango</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${color}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</iter>
-<iter>
-<var name="${color}">apple</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${color}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</iter>
-<iter>
-<var name="${color}">orange</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${color}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</iter>
-<iter>
-<var name="${color}">grapes</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${color}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</iter>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</for>
-<kw name="Log List" library="Collections">
-<arg>${fruits}</arg>
-<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">List length is 4 and it contains following items:
-0: mango
-1: apple
-2: orange
-3: grapes</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${otp}</arg>
-<arg>9753</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">${otp} = 9753</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
+<status status="FAIL" starttime="20220210 15:21:24.596" endtime="20220210 15:21:34.222">Element with locator 'name=fldLoginUserId' not found.</status>
 </test>
-<test id="s1-t2" name="TC2">
-<kw name="Log To Console" library="BuiltIn">
-<arg>${otp}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>&amp;{dic}</var>
-<arg>firstname=Jennifer</arg>
-<arg>lastname=Chopda</arg>
-<arg>mobile=09986544</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220210 13:33:39.357" level="INFO">&amp;{dic} = { firstname=Jennifer | lastname=Chopda | mobile=09986544 }</msg>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${dic}[lastname]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</kw>
-<status status="PASS" starttime="20220210 13:33:39.357" endtime="20220210 13:33:39.357"/>
-</test>
-<status status="PASS" starttime="20220210 13:33:39.327" endtime="20220210 13:33:39.373"/>
+<status status="FAIL" starttime="20220210 15:21:24.292" endtime="20220210 15:21:34.226"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Demo3 Suite">Demo3 Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hdfc Suite">Hdfc Suite</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220210 15:21:34.215" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01217AC3+2587331]
+	Ordinal0 [0x011AADD1+2141649]
+	Ordinal0 [0x010A3BB8+1063864]
+	Ordinal0 [0x0108C5D0+968144]
+	Ordinal0 [0x010EAE49+1355337]
+	Ordinal0 [0x010F8192+1409426]
+	Ordinal0 [0x010E84A6+1344678]
+	Ordinal0 [0x010C53F6+1201142]
+	Ordinal0 [0x010C62E6+1204966]
+	GetHandleVerifier [0x013BDF22+1680738]
+	GetHandleVerifier [0x01470DBC+2413564]
+	GetHandleVerifier [0x012AD151+563089]
+	GetHandleVerifier [0x012ABF13+558419]
+	Ordinal0 [0x011B081E+2164766]
+	Ordinal0 [0x011B5508+2184456]
+	Ordinal0 [0x011B5650+2184784]
+	Ordinal0 [0x011BF5BC+2225596]
+	BaseThreadInitThunk [0x76008494+36]
+	RtlAreBitsSet [0x77CC41C8+136]
+	RtlAreBitsSet [0x77CC4198+88]
+</msg>
 </errors>
 </robot>
