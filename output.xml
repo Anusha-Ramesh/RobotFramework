@@ -1,65 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 16:29:33.757" rpa="false" schemaversion="2">
-<suite id="s1" name="Hdfc Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\hdfc_suite.robot">
-<test id="s1-t1" name="TC1">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 17:18:56.902" rpa="false" schemaversion="2">
+<suite id="s1" name="Selenium Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\selenium_suite\selenium_suite.robot">
+<test id="s1-t1" name="TC3">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}\\drivers\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 16:29:34.462" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220210 16:29:34.461" endtime="20220210 16:29:36.000"/>
+<msg timestamp="20220210 17:18:57.220" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 17:18:57.219" endtime="20220210 17:18:58.660"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 16:29:36.000" endtime="20220210 16:29:36.137"/>
+<status status="PASS" starttime="20220210 17:18:58.661" endtime="20220210 17:18:58.833"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 16:29:36.138" endtime="20220210 16:29:36.148"/>
+<status status="PASS" starttime="20220210 17:18:58.833" endtime="20220210 17:18:58.836"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220210 17:18:58.838" endtime="20220210 17:18:58.838"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://netbanking.hdfcbank.com/netbanking/</arg>
+<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220210 16:29:36.155" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/'</msg>
-<status status="PASS" starttime="20220210 16:29:36.155" endtime="20220210 16:29:38.425"/>
-</kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//frame[@name='login_page']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220210 16:29:38.429" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
-<status status="PASS" starttime="20220210 16:29:38.427" endtime="20220210 16:29:38.490"/>
+<msg timestamp="20220210 17:18:58.839" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/index.php'</msg>
+<status status="PASS" starttime="20220210 17:18:58.839" endtime="20220210 17:19:03.854"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name=fldLoginUserId</arg>
-<arg>Abc123</arg>
+<arg>id=authUser</arg>
+<arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 16:29:38.491" level="INFO">Typing text 'Abc123' into text field 'name=fldLoginUserId'.</msg>
-<status status="PASS" starttime="20220210 16:29:38.491" endtime="20220210 16:29:38.573"/>
+<msg timestamp="20220210 17:19:03.857" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20220210 17:19:03.855" endtime="20220210 17:19:07.023"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>Click on continue</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220210 16:29:38.574" endtime="20220210 16:29:38.574"/>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220210 17:19:07.024" endtime="20220210 17:19:08.402"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=CONTINUE</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 16:29:38.575" level="INFO">Clicking element 'link=CONTINUE'.</msg>
-<status status="PASS" starttime="20220210 16:29:38.574" endtime="20220210 16:29:39.887"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220210 17:19:08.404" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20220210 17:19:10.483" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220210 17:19:11.534" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220210 17:19:08.403" endtime="20220210 17:19:11.534"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>switch to main html</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220210 16:29:39.888" endtime="20220210 16:29:39.888"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220210 17:19:11.536" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20220210 17:19:11.536" endtime="20220210 17:19:18.814"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220210 16:29:39.889" endtime="20220210 16:29:39.894"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${appdesc}</var>
+<arg>xpath=//p[contains(text(),'most')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220210 17:19:20.934" level="INFO">${appdesc} = The most popular open-source Electronic Health Record and Medical Practice Management solution.</msg>
+<status status="PASS" starttime="20220210 17:19:18.819" endtime="20220210 17:19:20.934"/>
 </kw>
-<status status="PASS" starttime="20220210 16:29:34.461" endtime="20220210 16:29:39.895"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${appdesc}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:19:20.935" endtime="20220210 17:19:20.935"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${appdescc}</var>
+<arg>link=Acknowledgments, Licensing and Certification</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220210 17:19:23.023" level="INFO">${appdescc} = Acknowledgments, Licensing and Certification</msg>
+<status status="PASS" starttime="20220210 17:19:20.937" endtime="20220210 17:19:23.023"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${appdescc}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:19:23.026" endtime="20220210 17:19:23.026"/>
+</kw>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<var>${selectdropdownlabel}</var>
+<arg>name=languageChoice</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<msg timestamp="20220210 17:19:44.484" level="INFO">${selectdropdownlabel} = English (Indian)</msg>
+<status status="PASS" starttime="20220210 17:19:23.029" endtime="20220210 17:19:44.484"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${selectdropdownlabel}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:19:44.484" endtime="20220210 17:19:44.486"/>
+</kw>
+<status status="PASS" starttime="20220210 17:18:57.219" endtime="20220210 17:19:44.487"/>
 </test>
-<status status="PASS" starttime="20220210 16:29:33.762" endtime="20220210 16:29:39.898"/>
+<status status="PASS" starttime="20220210 17:18:56.904" endtime="20220210 17:19:44.489"/>
 </suite>
 <statistics>
 <total>
@@ -68,7 +103,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Hdfc Suite">Hdfc Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Selenium Suite">Selenium Suite</stat>
 </suite>
 </statistics>
 <errors>

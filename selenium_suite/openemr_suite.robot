@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 TC1 Valid Login
 
              Append To Environment Variable    Path         ${EXECDIR}\\drivers
-      Open Browser    url=https://opensource-demo.orangehrmlive.com/             browser=chrome\chromedriver
+      Open Browser    url=https://demo.openemr.io/b/openemr/index.php         browser=chrome\chromedriver
       Maximize Browser Window
       Set Selenium Implicit Wait    30s
       Input Text    id=authUser    admin
@@ -16,5 +16,4 @@ TC1 Valid Login
       Log To Console    ${title}
       Title Should Be    OpenEMR
       Close Browser
-
 
