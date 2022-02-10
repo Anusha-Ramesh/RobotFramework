@@ -18,3 +18,18 @@ TC1 Multitabs login
     Select From List By Label    name=currency_code      JPY
     Click Element    name=submit
 
+TC2
+      Open Browser  url= https://www.db4free.net/     browser=chrome      executable_path=${EXECDIR}\\drivers\\chromedriver.exe
+    Maximize Browser Window
+    Set Selenium Implicit Wait    20s
+    Click Element    xpath=//b[contains(text(),'php']
+    Switch Window     NEW
+    Input Text    id=input_username      abxc
+    Input Text    id=input_password      test123
+    Click Element    id=input_go
+    Switch Window   MAIN
+    Click Element     link=Donations
+    Input Text       id=form_amount     -90
+    Select From List By Label    name=currency_code      JPY
+    Click Element    name=submit
+
