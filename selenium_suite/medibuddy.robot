@@ -20,3 +20,4 @@ TC1 Login Valid
     Input Text    id=empCount    50
     Click Element   xpath=//input[@value='Next']
     Close Window
+
