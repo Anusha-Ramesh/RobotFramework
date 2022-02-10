@@ -13,6 +13,12 @@ TC1
 TC2
    Log To Console    ${COLORS}
    Log To Console    ${COLORS}[2]
-   FOR     ${red}    IN    @{COLORS}
-       Log    ${red}
+   FOR     ${i}    IN RANGE   1   2    1
+       Log    ${1}
+   END
+TC3
+
+   For  ${blue}   IN  @{COLORS}
+       Continue For Loop If  $blue == '0'
+   Log ${blue}
    END
