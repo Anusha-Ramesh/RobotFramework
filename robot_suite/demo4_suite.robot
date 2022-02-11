@@ -29,3 +29,13 @@ TC2
 
      ${res}  Evaluate    ${v1}+${v2}
      Log To Console    {${res}}
+     
+TC3
+    Set Local Variable    ${mail}     harsha@gmail.com
+    
+    @{list}    Split String    ${mail}     @
+    Log To Console    ${list}[0]
+    
+    ${name}  Convert To Upper Case    ${list}[0]
+    Log To Console    ${name}
+    Should Be Equal    ${name}    HARSHA
