@@ -1,101 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 11:09:48.005" rpa="false" schemaversion="2">
-<suite id="s1" name="Advance Selenium Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\advanced_suite\advance_selenium_suite.robot">
-<test id="s1-t1" name="TC5">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<arg>executable_path=${EXECDIR}\\drivers\\chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 11:09:48.287" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220211 11:09:48.287" endtime="20220211 11:09:49.408"/>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 11:45:44.933" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo4 Suite" source="C:\Users\Anusha\Desktop\RFP\robot_project\robot_suite\demo4_suite.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${val1}</arg>
+<arg>$13,400,000</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220211 11:45:44.969" level="INFO">${val1} = $13,400,000</msg>
+<status status="PASS" starttime="20220211 11:45:44.968" endtime="20220211 11:45:44.969"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220211 11:09:49.408" endtime="20220211 11:09:49.527"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${val2}</var>
+<arg>$800,000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220211 11:45:44.970" level="INFO">${val2} = $800,000</msg>
+<status status="PASS" starttime="20220211 11:45:44.970" endtime="20220211 11:45:44.970"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220211 11:09:49.527" endtime="20220211 11:09:49.528"/>
+<kw name="Remove String" library="String">
+<var>${v1}</var>
+<arg>${val1}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20220211 11:45:44.970" level="INFO">${v1} = 13400000</msg>
+<status status="PASS" starttime="20220211 11:45:44.970" endtime="20220211 11:45:44.970"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220211 11:09:49.529" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/index.php'</msg>
-<status status="PASS" starttime="20220211 11:09:49.528" endtime="20220211 11:09:56.726"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220211 11:09:56.729" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20220211 11:09:56.727" endtime="20220211 11:09:56.816"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
-<arg>pass</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220211 11:09:56.816" level="INFO">Typing text 'pass' into text field 'id=clearPass'.</msg>
-<status status="PASS" starttime="20220211 11:09:56.816" endtime="20220211 11:09:56.891"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220211 11:09:56.892" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
-<status status="PASS" starttime="20220211 11:09:56.891" endtime="20220211 11:09:56.955"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:09:56.956" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220211 11:09:56.956" endtime="20220211 11:10:03.090"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20220211 11:10:03.096" level="INFO">${title} = OpenEMR</msg>
-<status status="PASS" starttime="20220211 11:10:03.090" endtime="20220211 11:10:03.096"/>
+<kw name="Remove String" library="String">
+<var>${v2}</var>
+<arg>${val2}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20220211 11:45:44.971" level="INFO">${v2} = 800000</msg>
+<status status="PASS" starttime="20220211 11:45:44.971" endtime="20220211 11:45:44.971"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${title}</arg>
+<arg>${val1}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220211 11:10:03.097" endtime="20220211 11:10:03.097"/>
+<status status="PASS" starttime="20220211 11:45:44.971" endtime="20220211 11:45:44.972"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>OpenEMR</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220211 11:10:03.100" level="INFO">Page title is 'OpenEMR'.</msg>
-<status status="PASS" starttime="20220211 11:10:03.097" endtime="20220211 11:10:03.101"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${val2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 11:45:44.972" endtime="20220211 11:45:44.972"/>
 </kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>xpath=//span[@data-bind='text:fname']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220211 11:10:03.101" level="INFO">Simulating Mouse Over on element 'xpath=//span[@data-bind='text:fname']'.</msg>
-<status status="PASS" starttime="20220211 11:10:03.101" endtime="20220211 11:10:03.434"/>
+<kw name="Evaluate" library="BuiltIn">
+<var>${res}</var>
+<arg>${v1}+${v2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220211 11:45:44.973" level="INFO">${res} = 14200000</msg>
+<status status="PASS" starttime="20220211 11:45:44.972" endtime="20220211 11:45:44.973"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//li[text()='Logout']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220211 11:10:03.435" level="INFO">Clicking element 'xpath=//li[text()='Logout']'.</msg>
-<status status="PASS" starttime="20220211 11:10:03.434" endtime="20220211 11:10:03.499"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{${res}}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 11:45:44.973" endtime="20220211 11:45:44.973"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220211 11:10:03.499" endtime="20220211 11:10:05.714"/>
-</kw>
-<status status="PASS" starttime="20220211 11:09:48.286" endtime="20220211 11:10:05.715"/>
+<status status="PASS" starttime="20220211 11:45:44.968" endtime="20220211 11:45:44.974"/>
 </test>
-<status status="PASS" starttime="20220211 11:09:48.007" endtime="20220211 11:10:05.720"/>
+<test id="s1-t2" name="TC2">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${val1}</arg>
+<arg>$13,400,000</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220211 11:45:44.975" level="INFO">${val1} = $13,400,000</msg>
+<status status="PASS" starttime="20220211 11:45:44.974" endtime="20220211 11:45:44.975"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${val2}</var>
+<arg>$800,000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220211 11:45:44.976" level="INFO">${val2} = $800,000</msg>
+<status status="PASS" starttime="20220211 11:45:44.975" endtime="20220211 11:45:44.976"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${v1}</var>
+<arg>${val1}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20220211 11:45:44.976" level="INFO">${v1} = 13400000</msg>
+<status status="PASS" starttime="20220211 11:45:44.976" endtime="20220211 11:45:44.976"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${v2}</var>
+<arg>${val2}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20220211 11:45:44.976" level="INFO">${v2} = 800000</msg>
+<status status="PASS" starttime="20220211 11:45:44.976" endtime="20220211 11:45:44.976"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${v1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 11:45:44.977" endtime="20220211 11:45:44.977"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${v2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 11:45:44.977" endtime="20220211 11:45:44.977"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${num1}</var>
+<arg>${v1}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20220211 11:45:44.978" level="INFO">${num1} = 13400000</msg>
+<status status="PASS" starttime="20220211 11:45:44.978" endtime="20220211 11:45:44.978"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${num2}</var>
+<arg>${v2}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20220211 11:45:44.978" level="INFO">${num2} = 800000</msg>
+<status status="PASS" starttime="20220211 11:45:44.978" endtime="20220211 11:45:44.978"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${res}</var>
+<arg>${v1}+${v2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220211 11:45:44.979" level="INFO">${res} = 14200000</msg>
+<status status="PASS" starttime="20220211 11:45:44.978" endtime="20220211 11:45:44.979"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{${res}}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220211 11:45:44.979" endtime="20220211 11:45:44.979"/>
+</kw>
+<status status="PASS" starttime="20220211 11:45:44.974" endtime="20220211 11:45:44.980"/>
+</test>
+<status status="PASS" starttime="20220211 11:45:44.935" endtime="20220211 11:45:44.980"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Advance Selenium Suite">Advance Selenium Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Demo4 Suite">Demo4 Suite</stat>
 </suite>
 </statistics>
 <errors>
