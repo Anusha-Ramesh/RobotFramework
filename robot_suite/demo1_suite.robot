@@ -3,6 +3,7 @@ Library  DateTime
 
 *** Test Cases ***
 TC1 Print Name
+   [Tags]  high
    Log To Console   hello,everyone
    Log To Console    welcome
 
@@ -11,9 +12,10 @@ TC2 Print Date
    Log To Console   ${date}
 
 TC3 Store Data
+     [Tags]  high
      Set Local variable     ${name}    Anusha
      Log To Console  ${name}
-     Log hello,${name}
+     Log hello ${name}
      ${title}    Set Variable     robotframeworksession
      Log To Console ${title}
 
