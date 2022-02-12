@@ -23,7 +23,7 @@ TC2
 
 
 
- Open Browser       browser=chrome      executable_path=${EXECDIR}\\drivers\\chromedriver.exe
+ Open Browser        browser=chrome      executable_path=${EXECDIR}\\drivers\\chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait   20s
     Go To    url=https://demo.openemr.io/b/openemr/index.php
