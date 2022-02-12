@@ -16,7 +16,7 @@ TC1
     Press Keys      None        RETURN
     [Teardown]  Close Browser
 
-TC2 php travellers advanced using keyboard activities
+TC2 php traveller advanced using keyboard activities
 
     Open Browser    browser=chrome      executable_path=${EXECDIR}${/}drivers${/}chromedriver
     Maximize Browser Window
